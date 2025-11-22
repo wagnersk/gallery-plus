@@ -9,6 +9,7 @@ import InputText from "./components/input-text";
 import SearchIcon from "./assets/icons/search.svg?react";
 
 import "./index.css"
+import InputCheckBox from "./components/input-checkbox";
 export default function App() {
 	return (
 		<div className="grid gap-7 p-6">
@@ -53,6 +54,10 @@ export default function App() {
 			</div>
 			<div>
 				<InputText icon={SearchIcon} placeholder="buscar foto" />
+			</div>
+
+			<div>
+				<InputCheckBox />
 			</div>
 		</div>
 	);
