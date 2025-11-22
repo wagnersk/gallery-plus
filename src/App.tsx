@@ -5,7 +5,10 @@ import ChevronRightIcon from "./assets/icons/chevron-right.svg?react";
 import Badge from "./components/badge";
 import Alert from "./components/alert";
 import Divider from "./components/divider";
+import InputText from "./components/input-text";
+import SearchIcon from "./assets/icons/search.svg?react";
 
+import "./index.css"
 export default function App() {
 	return (
 		<div className="grid gap-7 p-6">
@@ -47,6 +50,9 @@ export default function App() {
 
 			<div>
 				<Divider />
+			</div>
+			<div>
+				<InputText icon={SearchIcon} placeholder="buscar foto" />
 			</div>
 		</div>
 	);
