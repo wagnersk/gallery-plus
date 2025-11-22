@@ -7,10 +7,13 @@ import Alert from "./components/alert";
 import Divider from "./components/divider";
 import InputText from "./components/input-text";
 import SearchIcon from "./assets/icons/search.svg?react";
+import InputCheckbox from "./components/input-checkbox";
+import InputSingleFile from "./components/input-single-file";
+import { useForm } from "react-hook-form";
 
-import "./index.css"
-import InputCheckBox from "./components/input-checkbox";
 export default function App() {
+	const form = useForm();
+
 	return (
 		<div className="grid gap-7 p-6">
 			<div className="flex gap-3">
@@ -52,12 +55,17 @@ export default function App() {
 			<div>
 				<Divider />
 			</div>
+
 			<div>
-				<InputText icon={SearchIcon} placeholder="buscar foto" />
+				<InputText placeholder="Buscar foto" icon={SearchIcon} />
 			</div>
 
 			<div>
-				<InputCheckBox />
+				<InputCheckbox />
+			</div>
+
+			<div>
+				<InputSingleFile form={form} {...form.register("file")} />
 			</div>
 		</div>
 	);
