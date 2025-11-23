@@ -1,8 +1,38 @@
-import Text from '../components/text'
-
+import Container from "../components/container";
+import AlbumsFilter from "../contexts/albums/components/albums-filter";
+import PhotosList from "../contexts/photos/components/photos-list";
 
 export default function PageHome() {
     return (
-        <Text variant="heading-medium">Página inicial!</Text>
-    )
+        <Container>
+
+            <AlbumsFilter albums={[{ id: "3421", title: "Album 1" },
+            { id: "123", title: "Album 2" },
+            { id: "456", title: "Album 3" },]} className="m-9" />
+            <PhotosList
+                photos={[
+                    {
+                        id: "123",
+                        title: "Olá mundo!",
+                        imageId: "portrait-tower.png",
+                        albums: [
+                            { id: "3421", title: "Album 1" },
+                            { id: "123", title: "Album 2" },
+                            { id: "456", title: "Album 3" },
+                        ],
+                    },
+                    {
+                        id: "3",
+                        title: "Olá mundo!2",
+                        imageId: "portrait-tower.png",
+                        albums: [
+                            { id: "34221", title: "Album 1" },
+                            { id: "1213", title: "Album 2" },
+                            { id: "2", title: "Album 3" },
+                        ],
+                    },
+                ]}
+            />
+        </Container>
+    );
 }
