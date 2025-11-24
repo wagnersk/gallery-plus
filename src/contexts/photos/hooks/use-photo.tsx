@@ -1,10 +1,10 @@
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { api, fetcher } from "../../../helpers/api";
 import type { Photo } from "../models/photo";
-import type { PhotoNewFormSchema } from "../../schemas";
 import { toast } from "sonner";
 import usePhotoAlbums from "./use-photo-albums";
 import { useNavigate } from "react-router";
+import type { PhotoNewFormSchema } from "../../schemas";
 
 interface PhotoDetailResponse extends Photo {
     nextPhotoId?: string;
